@@ -7,11 +7,10 @@ import Item from './components/item';
 import items from './data/items';
 
 class App extends Component {
-
   render () {
     let itemList = items.map(item => <Item name={item.name} />)
     return (
-      <div>
+      <div className='bkgd-color'>
         <header>
           <h1>Weclome to React State & Events</h1>
           <hr />
