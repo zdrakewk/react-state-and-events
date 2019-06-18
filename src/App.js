@@ -16,7 +16,7 @@ class App extends Component {
           <h1>Weclome to React State & Events</h1>
           <hr />
         </header>
-        
+        <HeaderForm />
         <ul>
           {itemList}
         </ul>
