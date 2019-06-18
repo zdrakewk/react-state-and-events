@@ -17,6 +17,7 @@ class App extends Component {
           <hr />
         </header>
         <HeaderForm />
+        <Search />
         <ul>
           {itemList}
         </ul>
