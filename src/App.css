@@ -23,11 +23,13 @@ body {
 .white-card {
   background-color: white;
   opacity: .8;
-  width: 50%;
+  width: 100%;
   /* centers info */
   /* margin: auto; */
   border-radius: 10px
 }
 
-.white-card h2 {
+input {
+  height: 50px;
+  width: 50%;
 }

@@ -7,16 +7,27 @@ import Item from './components/item';
 import items from './data/items';
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      header: 'Welcome learning about React Events'
+    }
+  }
+
+  changeHeader = (txt) => {
+    this.setState({header: txt})
+  }
+
   render () {
     let itemList = items.map(item => <Item name={item.name} />)
     return (
       <div className='bkgd-color'>
       
         <header>
-          <h1>Weclome to React State & Events</h1>
+          <h1>{this.state.header}</h1>
           <hr />
         </header>
-        <HeaderForm />
+        <HeaderForm header={this.state.header} changePHeader={this.changeHeader}/>
         <div className='white-card'>
         <Search />
         <ul>
