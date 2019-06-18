@@ -11,15 +11,19 @@ class App extends Component {
     let itemList = items.map(item => <Item name={item.name} />)
     return (
       <div className='bkgd-color'>
+      
         <header>
           <h1>Weclome to React State & Events</h1>
           <hr />
         </header>
         <HeaderForm />
+        <div className='white-card'>
         <Search />
         <ul>
           {itemList}
         </ul>
+
+        </div>
       </div>
     );
   }
