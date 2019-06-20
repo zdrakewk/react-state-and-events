@@ -10,7 +10,10 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      header: 'Welcome learning about React Events'
+      header: 'Welcome to learning about React Events',
+      allItems: items,
+      filtered: false,
+      filteredItems: []
     }
   }
 
@@ -18,8 +21,30 @@ class App extends Component {
     this.setState({header: txt})
   }
 
+  arraySelection = () => {
+    if (this.state.filtered) {
+     return this.state.filteredItems 
+    } else {
+      return this.state.allItems
+    }
+  }
+
+  changeFilterInfo =(arr) => {
+    if (arr !== []) {
+      this.setState({
+        filtered: true, 
+        filteredItems: arr
+      })
+    } else {
+      this.setState({
+        filtered: false, 
+        filteredItems: []
+      })  
+    }
+    
+  }
   render () {
-    let itemList = items.map(item => <Item name={item.name} />)
+    let itemList = this.arraySelection().map((item, index) => <Item name={item.name} key={index + 1}/>)
     return (
       <div className='bkgd-color'>
       
@@ -29,7 +54,7 @@ class App extends Component {
         </header>
         <HeaderForm header={this.state.header} changePHeader={this.changeHeader}/>
         <div className='white-card'>
-        <Search />
+        <Search orgItems={this.state.allItems} changePFilterInfo={this.changeFilterInfo} />
         <ul>
           {itemList}
         </ul>
