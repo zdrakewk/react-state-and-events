@@ -1,0 +1,12 @@
+solid React blog:
+-https://overreacted.io
+
+key - prop for components being iteratored on
+-https://reactjs.org/docs/reconciliation.html
+
+CSS/styling React Aps
+-styling w/React router: https://youtu.be/9AboneIxeM8
+
+-background gradients: https://uigradients.com/#BacktotheFuture
+
+-styling: https://www.youtube.com/watch?v=n8iA18R76jk&t=240s
